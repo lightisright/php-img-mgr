@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Prints image path into local JSON file (print section)
+ */
+
 include("inc/JsonImgList.php");
 
 $o = new JsonImgList();

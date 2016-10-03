@@ -87,6 +87,7 @@ html,body{height:100%;}
         <li><a id="prev" href="#">&lt;</a></li>
         <li><a id="next" href="#">&gt;</a></li>
         <li><a id="print" href="#">Print</a></li>
+        <li><a id="showonphotoframe" href="#">Frame &gt;</a></li>
         <li><a id="albummenu" href="#">Albums</a></li>
         <li><a id="del" href="#">Del</a></li>
       </ul>
@@ -185,6 +186,13 @@ $('#del').click( function() {
 /* image printing */
 $('#print').click( function() { 	
 	$.getJSON("print.php?dir="+$('#dirlst').val()+"&id="+imglst[curimg], function(result) {
+		$('cmd').push(result.text);
+	});
+ });
+ 
+/* start slideshow on photoframe */
+$('#showonphotoframe').click( function() { 	
+	$.getJSON("showonphotoframe.php?dir="+$('#dirlst').val(), function(result) {
 		$('cmd').push(result.text);
 	});
  });

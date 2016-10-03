@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Returns JSON directory list
+ * dirID => directory_path
+ * dirname => directory name
+ */
+
 include('config.php');
 
 $dirlst = array();

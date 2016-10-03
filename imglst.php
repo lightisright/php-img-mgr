@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Returns JSON image list of given directory
+ * imgID => image name
+ * filename => http image path
+ */
+
 include('config.php');
 
 $dir = $_GET['dir'];
